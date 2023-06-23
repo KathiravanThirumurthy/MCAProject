@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -24,7 +25,8 @@ public class UIManager : MonoBehaviour
     private GameObject audiocanvas; // Reference to the canvas you want to toggle
     [SerializeField]
     private GameObject levelLoadercanvas; // Reference to the canvas you want to toggle
-
+    [SerializeField]
+    private Button _closePopBtn;
 
 
     // Method to toggle the canvas on or off
@@ -66,4 +68,9 @@ public class UIManager : MonoBehaviour
         // SceneManager.LoadScene("LevelScreen");
         levelLoadercanvas.SetActive(true);
     }
+    public void panelPopout()
+    {
+        levelLoadercanvas.SetActive(false);
+    }
+
 }
