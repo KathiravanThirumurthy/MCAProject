@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     private GameObject controlcanvas; // Reference to the canvas you want to toggle
     [SerializeField]
     private GameObject audiocanvas; // Reference to the canvas you want to toggle
+    [SerializeField]
+    private GameObject levelLoadercanvas; // Reference to the canvas you want to toggle
 
 
 
@@ -61,6 +63,7 @@ public class UIManager : MonoBehaviour
     public void startLevel()
     {
         // optioncanvas.SetActive(false);
-        SceneManager.LoadScene("LevelScreen");
+        // SceneManager.LoadScene("LevelScreen");
+        levelLoadercanvas.SetActive(true);
     }
 }
