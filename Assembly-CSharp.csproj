@@ -53,9 +53,11 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerControls\Playercontroller.cs" />
+    <Compile Include="Assets\Scripts\PlayerControls\Playeranimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

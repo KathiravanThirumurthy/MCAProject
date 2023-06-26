@@ -1,0 +1,1064 @@
+fileFormatVersion: 2
+guid: 3952391064022044da4fe9f7b5b09a62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8193887466409436950
+    second: CavesFGMask02_0
+  - first:
+      213: -2273829925975174826
+    second: CavesFGMask02_1
+  - first:
+      213: -7993099816400504668
+    second: CavesFGMask02_2
+  - first:
+      213: 7532218222514899976
+    second: CavesFGMask02_3
+  - first:
+      213: 483684615444211395
+    second: CavesFGMask02_4
+  - first:
+      213: -7620381413463928643
+    second: CavesFGMask02_5
+  - first:
+      213: -7559520587595206445
+    second: CavesFGMask02_6
+  - first:
+      213: -3694755748044613974
+    second: CavesFGMask02_7
+  - first:
+      213: 4781615397108294086
+    second: CavesFGMask02_8
+  - first:
+      213: -5309360091808638402
+    second: CavesFGMask02_9
+  - first:
+      213: 5391408934497644691
+    second: CavesFGMask02_10
+  - first:
+      213: -7951028497932423941
+    second: CavesFGMask02_11
+  - first:
+      213: -6928845712090420755
+    second: CavesFGMask02_12
+  - first:
+      213: 280758245762319912
+    second: CavesFGMask02_13
+  - first:
+      213: 9217271855935862758
+    second: CavesFGMask02_14
+  - first:
+      213: 8951935563710923665
+    second: CavesFGMask02_15
+  - first:
+      213: 7860089718802493262
+    second: CavesFGMask02_16
+  - first:
+      213: -4260058144735690960
+    second: CavesFGMask02_17
+  - first:
+      213: 7503439514817249216
+    second: CavesFGMask02_18
+  - first:
+      213: -5560635904313131631
+    second: CavesFGMask02_19
+  - first:
+      213: -1233228784764660380
+    second: CavesFGMask02_20
+  - first:
+      213: 2221586237469959038
+    second: CavesFGMask02_21
+  - first:
+      213: 3376420689694763730
+    second: CavesFGMask02_22
+  - first:
+      213: -5419254733948872428
+    second: CavesFGMask02_23
+  - first:
+      213: -1193111704358867919
+    second: CavesFGMask02_24
+  - first:
+      213: -5357852579513058933
+    second: CavesFGMask02_25
+  - first:
+      213: 244698159228127705
+    second: CavesFGMask02_26
+  - first:
+      213: 5129260730895510753
+    second: CavesFGMask02_27
+  - first:
+      213: -3966494216770435025
+    second: CavesFGMask02_28
+  - first:
+      213: -6773478648814076921
+    second: CavesFGMask02_29
+  - first:
+      213: 7709891195308002851
+    second: CavesFGMask02_30
+  - first:
+      213: 7224402647540804455
+    second: CavesFGMask02_31
+  - first:
+      213: -3682472222086798598
+    second: CavesFGMask02_32
+  - first:
+      213: -1999815803219696551
+    second: CavesFGMask02_33
+  - first:
+      213: -2027990332029235781
+    second: CavesFGMask02_34
+  - first:
+      213: -1430000532243256061
+    second: CavesFGMask02_35
+  - first:
+      213: 8743703340495806090
+    second: CavesFGMask02_36
+  - first:
+      213: -1612792740240026015
+    second: CavesFGMask02_37
+  - first:
+      213: -8687207180508845333
+    second: CavesFGMask02_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CavesFGMask02_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8d32b23c6794e80800000000000000
+      internalID: -8193887466409436950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651d896cabbb170e0800000000000000
+      internalID: -2273829925975174826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a83535f01ec21190800000000000000
+      internalID: -7993099816400504668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c89b3e090d78860800000000000000
+      internalID: 7532218222514899976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6afd6589466b600800000000000000
+      internalID: 483684615444211395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db05e7d9a77fe3690800000000000000
+      internalID: -7620381413463928643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0b220e310371790800000000000000
+      internalID: -7559520587595206445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 596
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6d7f9093799bcc0800000000000000
+      internalID: -3694755748044613974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1ad2d9ed5bb5240800000000000000
+      internalID: 4781615397108294086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a5c1f602d5156b0800000000000000
+      internalID: -5309360091808638402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390799b6cd122da40800000000000000
+      internalID: 5391408934497644691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfceabd15b548a190800000000000000
+      internalID: -7951028497932423941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9ac53198bc7df90800000000000000
+      internalID: -6928845712090420755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826cc62132475e300800000000000000
+      internalID: 280758245762319912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e73343fae35aef70800000000000000
+      internalID: 9217271855935862758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 468
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1930d2f37f9ab3c70800000000000000
+      internalID: 8951935563710923665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f2ce764f5a41d60800000000000000
+      internalID: 7860089718802493262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ff48820bb31e4c0800000000000000
+      internalID: -4260058144735690960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfbf4adb72912860800000000000000
+      internalID: 7503439514817249216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19df1264b17a4d2b0800000000000000
+      internalID: -5560635904313131631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465d05544f0b2eee0800000000000000
+      internalID: -1233228784764660380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_21
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e732b4a99e8a4de10800000000000000
+      internalID: 2221586237469959038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_22
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 340
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da298d6ab47bde20800000000000000
+      internalID: 3376420689694763730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4199f9b2880fac4b0800000000000000
+      internalID: -5419254733948872428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c245ce937317fe0800000000000000
+      internalID: -1193111704358867919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89b63f477515a5b0800000000000000
+      internalID: -5357852579513058933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d90cf9eda7556300800000000000000
+      internalID: 244698159228127705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_27
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec2361757bce2740800000000000000
+      internalID: 5129260730895510753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_28
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28c1c5768e24f8c0800000000000000
+      internalID: -3966494216770435025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c7ebb6e05cff1a0800000000000000
+      internalID: -6773478648814076921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_30
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 212
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ece3181390ffa60800000000000000
+      internalID: 7709891195308002851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76baf017eeb324460800000000000000
+      internalID: 7224402647540804455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2e54b460b35ecc0800000000000000
+      internalID: -3682472222086798598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954a0e85f1a3f34e0800000000000000
+      internalID: -1999815803219696551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd887ba9812bd3e0800000000000000
+      internalID: -2027990332029235781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d6507a71e972ce0800000000000000
+      internalID: -1430000532243256061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e16afacdfd75970800000000000000
+      internalID: 8743703340495806090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_37
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1661aa53c853e99e0800000000000000
+      internalID: -1612792740240026015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavesFGMask02_38
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 84
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea2c8b9817d07780800000000000000
+      internalID: -8687207180508845333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
