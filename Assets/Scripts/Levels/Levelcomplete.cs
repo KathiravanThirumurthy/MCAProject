@@ -20,12 +20,13 @@ public class Levelcomplete : MonoBehaviour
         // if the player collides with Ground with tag "Platform"
         if (target.gameObject.GetComponent<Playercontroller>())
         {
+            
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             /*Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.buildIndex+1);*/
             SceneManager.LoadScene(nextSceneLoad);
             //Setting Int for Index
-            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            if (nextSceneLoad >= PlayerPrefs.GetInt("levelAt"))
             {
                 PlayerPrefs.SetInt("levelAt", nextSceneLoad);
             }
