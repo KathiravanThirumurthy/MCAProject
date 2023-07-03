@@ -16,8 +16,10 @@ public class LevelManager : MonoBehaviour
     private GameObject _loader;*/
     [SerializeField]
     private Button _resetBtn;
-   /* [SerializeField]
-    private Button _closePopBtn;*/
+    /* [SerializeField]
+     private Button _closePopBtn;*/
+    [SerializeField]
+    private Color _newColor;
     private Animator anim;
     public float desiredWidth = 3f; // Desired width of the sprite
     public float desiredHeight = 3f;
@@ -47,7 +49,10 @@ public class LevelManager : MonoBehaviour
                 levelBtns[i].image.sprite = unlockedImage;
                 RectTransform rectTransform = levelBtns[i].GetComponent<RectTransform>();
                 Text buttonText = levelBtns[i].GetComponentInChildren<Text>();
-                buttonText.text = i.ToString();
+               
+                
+                buttonText.text = (i + 1).ToString();
+               // buttonText.color = _newColor;
                 Vector2 sizeDelta = rectTransform.sizeDelta;
                 sizeDelta.x = 100;
                 sizeDelta.y = 100;

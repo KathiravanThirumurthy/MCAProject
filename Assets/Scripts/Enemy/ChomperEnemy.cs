@@ -84,6 +84,7 @@ public class ChomperEnemy : Enemy
         {
             // on getting the component calling the pickup key method from PlayerController
             _playercontroller.playerDead(true);
+           // LifeController.instance.UpdateLives();
 
         }
     }

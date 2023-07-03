@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 4748351257287811321}
   - component: {fileID: 4748351257287811318}
   - component: {fileID: 6171477774047922419}
-  - component: {fileID: 2491194470929775507}
+  - component: {fileID: 1180326309}
   m_Layer: 0
   m_Name: Hero
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f8a38088641ee458f930c2c667e3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2491194470929775507
+--- !u!114 &1180326309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   _scoreController: {fileID: 0}
   _gameOverController: {fileID: 0}
   speed: 4
-  _jumpForce: 8
+  _jumpForce: 10
   _lives: 3
-  keyPickup: {fileID: 0}
+  keyPickup: {fileID: 8300000, guid: 282cc134ce68aa14ba3d535cdf6cc77f, type: 3}
   playerDeath: {fileID: 0}

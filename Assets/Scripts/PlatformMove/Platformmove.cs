@@ -49,7 +49,7 @@ public class Platformmove : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("Platfor touched");
+            Debug.Log("Platform touched");
             col.transform.parent = this.transform;
             //  target.transform.parent = null;
         }
@@ -63,4 +63,5 @@ public class Platformmove : MonoBehaviour
              target.transform.parent = null;
         }
     }
+    
 }

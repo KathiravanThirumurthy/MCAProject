@@ -32,7 +32,7 @@ public class Playercontroller : MonoBehaviour
         rgdPlayer = GetComponent<Rigidbody2D>();
         _playerAnimation = GetComponent<Playeranimation>();
        // _scoreController = GameObject.Find().GetComponent<ScoreManager>();
-        Debug.Log(_scoreController);
+       // Debug.Log(_scoreController);
         // Intialising variables to check for Grounded and crouch
         isGrounded = false;
         isCrouch = false;
@@ -97,17 +97,17 @@ public class Playercontroller : MonoBehaviour
         _playerAnimation.playerDead(playerState);
       //  Damage();
     }
-  /*  public void Damage()
+    public void Damage()
     {
-
+        Debug.Log("Damage");
         _lives--;
-        UIManager.instance.UpdateLives(_lives);
+        LifeController.instance.UpdateLives(_lives);
 
         if (_lives < 0)
         {
 
             Debug.Log("Player Killed by the EnemyChomper ");
-            UIManager.instance.UpdateLives(_lives);
+            LifeController.instance.UpdateLives(_lives);
         }
         else if (_lives == 0)
         {
@@ -119,5 +119,5 @@ public class Playercontroller : MonoBehaviour
             Debug.Log("Remaining Lives : " + _lives);
         }
 
-    }*/
+    }
 }
