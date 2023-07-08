@@ -43,8 +43,6 @@ public class LifeController : MonoBehaviour
             {
                 _lives[i].enabled = false;
 
-
-
             }
         }
     }
