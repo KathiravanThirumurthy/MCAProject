@@ -27,6 +27,13 @@ public class Playercontroller : MonoBehaviour
     private AudioClip keyPickup;
     [SerializeField]
     private AudioClip playerDeath;
+    [SerializeField]
+    private float gravityScale = 3f;
+    [SerializeField]
+    private bool isFalling = false;
+    [SerializeField]
+    private bool isMoving = false;
+    private float move;
     void Awake()
     {
         rgdPlayer = GetComponent<Rigidbody2D>();
@@ -41,27 +48,78 @@ public class Playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float move = Input.GetAxisRaw("Horizontal");
+        /*if(!isFalling)
+        {
+            move = Input.GetAxisRaw("Horizontal");
+            rgdPlayer.gravityScale = gravityScale;
+            _playerAnimation.flipPlayer(move);
+            rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
+            _playerAnimation.movement(move);
+        }*/
+        
         if(Input.GetKeyDown(KeyCode.Space))
         {
             // Checking the player is grounded
-            if (isGrounded)
+            if (isGrounded )
             {
                 //adding velocity to the player in the y direction to jump
                 rgdPlayer.velocity = new Vector2(rgdPlayer.velocity.x, _jumpForce);
                 // when the player is in air it Space bar shouldnt be pressed 
                 isGrounded = false;
+                isFalling = false;
                 // calling the jumping method from the PlayerAnimation Script
                 _playerAnimation.jumping(true);
             }
-           // _playerAnimation.jumping(true);
+          /* else
+            {
+                isFalling = true;
+            }*/
+           
         }
         
-        _playerAnimation.flipPlayer(move);
-        rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
-        _playerAnimation.movement(move);
-
         
+
+        /* if (isGrounded)
+         {
+             isFalling = false;
+
+             if (Input.GetKeyDown(KeyCode.Space))
+             {
+                 //adding velocity to the player in the y direction to jump
+                 rgdPlayer.velocity = new Vector2(rgdPlayer.velocity.x, _jumpForce);
+                 // when the player is in air it Space bar shouldnt be pressed 
+                 isGrounded = false;
+                 isFalling = false;
+                 // calling the jumping method from the PlayerAnimation Script
+                 _playerAnimation.jumping(true);
+             }
+         }
+         else
+         {
+             isFalling = true;
+         }*/
+
+
+    }
+    private void FixedUpdate()
+    {
+        /*  if (!isFalling && isGrounded)
+          {
+              move = Input.GetAxisRaw("Horizontal");
+              rgdPlayer.gravityScale = gravityScale;
+              _playerAnimation.flipPlayer(move);
+              rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
+              _playerAnimation.movement(move);
+          }*/
+        if (!isFalling)
+        {
+            move = Input.GetAxisRaw("Horizontal");
+            //isMoving = true;
+            rgdPlayer.gravityScale = gravityScale;
+            _playerAnimation.flipPlayer(move);
+            rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
+            _playerAnimation.movement(move);
+        }
     }
     // checking the player for collision with the platform
     private void OnCollisionEnter2D(Collision2D collision)
