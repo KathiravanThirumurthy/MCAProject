@@ -19,7 +19,7 @@ public class Keycollectable : MonoBehaviour
     // checking for the Collision of the key gameobject with Player
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collected");
+      //  Debug.Log("Collected");
         // getting the component of the collision object a
         _playercontroller = collision.gameObject.GetComponent<Playercontroller>();
         // checking whether the component is available

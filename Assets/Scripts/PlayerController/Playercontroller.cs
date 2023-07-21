@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Playercontroller : MonoBehaviour
 {
@@ -34,8 +35,14 @@ public class Playercontroller : MonoBehaviour
     [SerializeField]
     private bool isMoving = false;
     private float move;
+    private int nextSceneLoad;
+    [SerializeField]
+    private Animator transistion;
+    [SerializeField]
+    private float transistionTime = 15f;
     void Awake()
     {
+        Time.timeScale = 1f;
         rgdPlayer = GetComponent<Rigidbody2D>();
         _playerAnimation = GetComponent<Playeranimation>();
        // _scoreController = GameObject.Find().GetComponent<ScoreManager>();
@@ -43,6 +50,7 @@ public class Playercontroller : MonoBehaviour
         // Intialising variables to check for Grounded and crouch
         isGrounded = false;
         isCrouch = false;
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     // Update is called once per frame
@@ -136,12 +144,32 @@ public class Playercontroller : MonoBehaviour
         {
             Debug.Log("Dead");
             _playerAnimation.playerDead(true);
-            _gameOverController.PlayerDied();
+            StartCoroutine(playGameOverDelay());
+            // _gameOverController.PlayerDied();
 
         }
 
     }
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.gameObject.tag == "LevelComplete")
+        {
+            Debug.Log("LEvelComplete");
+            StartCoroutine(LoadLevel(nextSceneLoad));
+        }
 
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transistion.SetTrigger("Start");
+        yield return new WaitForSeconds(transistionTime);
+        SceneManager.LoadScene(levelIndex);
+        if (levelIndex >= PlayerPrefs.GetInt("levelAt"))
+        {
+            PlayerPrefs.SetInt("levelAt", levelIndex);
+        }
+    }
     public void pickUpKey(int score)
     {
         // Debug.Log("Score:" + score);
@@ -152,8 +180,8 @@ public class Playercontroller : MonoBehaviour
     public void playerDead(bool playerState)
     {
         Debug.Log("Player was hit");
-        _playerAnimation.playerDead(playerState);
-      //  Damage();
+      //  _playerAnimation.playerDead(playerState);
+        Damage();
     }
     public void Damage()
     {
@@ -172,10 +200,19 @@ public class Playercontroller : MonoBehaviour
 
             _playerAnimation.playerDead(true);
             //UIManager.instance.restartCurrentScene();
-            _gameOverController.PlayerDied();
-            AudioManager.Instance.playeDeath(playerDeath);
-            Debug.Log("Remaining Lives : " + _lives);
+           
+          //  AudioManager.Instance.playeDeath(playerDeath);
+            StartCoroutine(playGameOverDelay());
+            // _gameOverController.PlayerDied();
+            
+            // Debug.Log("Remaining Lives : " + _lives);
         }
 
+    }
+    private IEnumerator playGameOverDelay()
+    {
+        yield return new WaitForSeconds(3f);
+        _gameOverController.PlayerDied();
+        Time.timeScale = 0f;
     }
 }

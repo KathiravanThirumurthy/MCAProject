@@ -58,7 +58,7 @@ public class ChomperEnemy : Enemy
         transform.position = Vector3.MoveTowards(transform.position, _currentTarget, speed * Time.deltaTime);
 
     }
-    private void flipChomper()
+   private void flipChomper()
     {
         //if the enemy is in pointA waypoints
         if (_currentTarget == pointA.position)
@@ -84,7 +84,7 @@ public class ChomperEnemy : Enemy
         {
             // on getting the component calling the pickup key method from PlayerController
             _playercontroller.playerDead(true);
-           // LifeController.instance.UpdateLives();
+            //LifeController.instance.UpdateLives();
 
         }
     }

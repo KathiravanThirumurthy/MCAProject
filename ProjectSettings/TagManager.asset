@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Deathline
+  - LevelComplete
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Levels
+    uniqueID: 2745028427
     locked: 0

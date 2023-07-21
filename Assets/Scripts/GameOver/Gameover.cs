@@ -18,12 +18,15 @@ public class Gameover : MonoBehaviour
     private Button _btnLobby;
     [SerializeField]
     private Button _btnQuit;
+    [SerializeField]
+    private Button _btnReload;
 
     private void Awake()
     {
         //Click Listener is added to the Reload 
         _btnLobby.onClick.AddListener(LobbyScreen);
         _btnQuit.onClick.AddListener(QuitGame);
+        _btnReload.onClick.AddListener(ReloadLevel);
 
     }
     // When player is dead , GameOver object is set to true
