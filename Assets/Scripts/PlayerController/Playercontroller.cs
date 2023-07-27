@@ -40,6 +40,12 @@ public class Playercontroller : MonoBehaviour
     private Animator transistion;
     [SerializeField]
     private float transistionTime = 15f;
+
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+    public int attackDamage=40;
+
     void Awake()
     {
         Time.timeScale = 1f;
@@ -56,15 +62,7 @@ public class Playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(!isFalling)
-        {
-            move = Input.GetAxisRaw("Horizontal");
-            rgdPlayer.gravityScale = gravityScale;
-            _playerAnimation.flipPlayer(move);
-            rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
-            _playerAnimation.movement(move);
-        }*/
-        
+       
         if(Input.GetKeyDown(KeyCode.Space))
         {
             // Checking the player is grounded
@@ -78,47 +76,25 @@ public class Playercontroller : MonoBehaviour
                 // calling the jumping method from the PlayerAnimation Script
                 _playerAnimation.jumping(true);
             }
-          /* else
-            {
-                isFalling = true;
-            }*/
+         
+        }
+        if(Input.GetMouseButtonDown(0) && isGrounded)
+        {
+           
+            PlayerAttack();
+            _playerAnimation.attack();
            
         }
-        
-        
+       
 
-        /* if (isGrounded)
-         {
-             isFalling = false;
 
-             if (Input.GetKeyDown(KeyCode.Space))
-             {
-                 //adding velocity to the player in the y direction to jump
-                 rgdPlayer.velocity = new Vector2(rgdPlayer.velocity.x, _jumpForce);
-                 // when the player is in air it Space bar shouldnt be pressed 
-                 isGrounded = false;
-                 isFalling = false;
-                 // calling the jumping method from the PlayerAnimation Script
-                 _playerAnimation.jumping(true);
-             }
-         }
-         else
-         {
-             isFalling = true;
-         }*/
+
 
 
     }
     private void FixedUpdate()
     {
-        /*  if (!isFalling && isGrounded)
-          {
-              move = Input.GetAxisRaw("Horizontal");
-              rgdPlayer.gravityScale = gravityScale;
-              _playerAnimation.flipPlayer(move);
-              rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
-              _playerAnimation.movement(move);
-          }*/
+        
         if (!isFalling)
         {
             move = Input.GetAxisRaw("Horizontal");
@@ -177,15 +153,17 @@ public class Playercontroller : MonoBehaviour
          AudioManager.Instance.PlayCollectable(keyPickup);
     }
 
+    
+
     public void playerDead(bool playerState)
     {
-        Debug.Log("Player was hit");
+       // Debug.Log("Player was hit");
       //  _playerAnimation.playerDead(playerState);
         Damage();
     }
     public void Damage()
     {
-        Debug.Log("Damage");
+       // Debug.Log("Damage");
         _lives--;
         LifeController.instance.UpdateLives(_lives);
 
@@ -214,5 +192,23 @@ public class Playercontroller : MonoBehaviour
         yield return new WaitForSeconds(3f);
         _gameOverController.PlayerDied();
         Time.timeScale = 0f;
+    }
+    private void PlayerAttack()
+    {
+        
+        Collider2D[] hitEnemies =Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach(Collider2D enemy in hitEnemies)
+        {
+           // Debug.Log("we hit " + enemy.name);
+            enemy.GetComponent<MeleeEnemy>().TakeDamage(attackDamage);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if(attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

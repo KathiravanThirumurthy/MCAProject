@@ -6,6 +6,9 @@ using UnityEngine;
 /// </summary>
 public class ChomperEnemy : Enemy
 {
+    public int maxhealth = 100;
+    private int currentHealth;
+
     // Initializing target pos
     private Vector3 _currentTarget;
 
@@ -21,6 +24,7 @@ public class ChomperEnemy : Enemy
         _animator = GetComponent<Animator>();
         // getting the SpriteRender
         _chomperSprite = GetComponent<SpriteRenderer>();
+        currentHealth=maxhealth;
     }
 
     // Update is called once per frame
@@ -35,6 +39,27 @@ public class ChomperEnemy : Enemy
         }
         // Creating the Patrol AI for Enemy
         movementEnemy();
+    }
+    public void takeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if(currentHealth <=0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+
+        //Die enemy
+
+        // _animator.SetBool("isDead",true);
+
+
+        //Disable enemy
+        /* GetComponent<Collider2D>().enabled = false;
+         this.enabled = false;*/
+       // Debug.Log(_animator);
     }
     private void movementEnemy()
     {
@@ -76,7 +101,7 @@ public class ChomperEnemy : Enemy
     // checking for the Collision of the key gameobject with Player
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collide");
+      //  Debug.Log("Collide");
         // getting the component of the collision object a
         _playercontroller = collision.gameObject.GetComponent<Playercontroller>();
         // checking whether the component is available

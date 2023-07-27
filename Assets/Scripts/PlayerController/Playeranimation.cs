@@ -34,4 +34,9 @@ public class Playeranimation : MonoBehaviour
     {
         anim.SetBool("isDead", dead);
     }
+    public void attack()
+    {
+        anim.SetTrigger("isAttack");
+        //Detect enemies in 
+    }
 }

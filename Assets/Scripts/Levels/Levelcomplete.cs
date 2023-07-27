@@ -11,7 +11,7 @@ public class Levelcomplete : MonoBehaviour
     [SerializeField]
     private Animator transistion;
     [SerializeField]
-    private float transistionTime=5f;
+    private float transistionTime=3f;
     private bool reset;
     public int nextSceneLoad;
     private void Awake()

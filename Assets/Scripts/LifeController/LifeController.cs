@@ -34,7 +34,7 @@ public class LifeController : MonoBehaviour
     public void UpdateLives(int livesRemaining)
     {
 
-        Debug.Log(livesRemaining);
+        //Debug.Log(livesRemaining);
         //looping through lives of the Payer
         for (int i = 0; i <= livesRemaining; i++)
         {
