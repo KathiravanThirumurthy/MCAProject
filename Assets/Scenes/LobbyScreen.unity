@@ -1091,6 +1091,9 @@ MonoBehaviour:
   levelCompleteSource: {fileID: 228681041}
   LowPitchRange: 0.95
   HighPitchRange: 1.05
+  masterVolumeSlider: {fileID: 1560300775}
+  musicVolumeSlider: {fileID: 1045866074}
+  sfxVolumeSlider: {fileID: 1793748916}
 --- !u!4 &228681043
 Transform:
   m_ObjectHideFlags: 0
@@ -1678,7 +1681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1687,8 +1690,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4709262cb15b8ae49a2461b70d13cba4, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 75
@@ -1698,32 +1701,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in
-    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including
-    versions of Lorem Ipsum.
+  m_Text: '
 
-    Lorem Ipsum is simply dummy text of the printing
-    and typesetting industry. Lorem Ipsum has been the industry''s standard dummy
-    text ever since the 1500s, when an unknown printer took a galley of type and
-    scrambled it to make a type specimen book. It has survived not only five centuries,
-    but also the leap into electronic typesetting, remaining essentially unchanged.
-    It was popularised in the 1960s with the release of Letraset sheets containing
-    Lorem Ipsum passages, and more recently with desktop publishing software like
-    Aldus PageMaker including versions of Lorem Ipsum.
+    RightArrow - Right side movement of the Player
 
-    Lorem Ipsum is simply
-    dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-    industry''s standard dummy text ever since the 1500s, when an unknown printer
-    took a galley of type and scrambled it to make a type specimen book. It has survived
-    not only five centuries, but also the leap into electronic typesetting, remaining
-    essentially unchanged. It was popularised in the 1960s with the release of Letraset
-    sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-    software like Aldus PageMaker including versions of Lorem Ipsum.'
+
+    LeftArrow -
+    Left  side movement of the Player
+
+
+    LeftCtrl - Player Attack
+
+
+    SpaceBar
+    - Player Jump'
 --- !u!222 &294992444
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1887,7 +1878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1066.6387, y: 811.4416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310180291
@@ -3816,8 +3807,8 @@ RectTransform:
   m_Father: {fileID: 402895904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.08, y: 0}
+  m_AnchorMax: {x: 0.08, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4974,7 +4965,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 201324450}
   m_HandleRect: {fileID: 201324449}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1
   m_Size: 0.5602518
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5546,12 +5537,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6076,10 +6067,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.7
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228681042}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: setVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1058294768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,7 +6826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315, y: 258}
+  m_AnchoredPosition: {x: -30, y: 258}
   m_SizeDelta: {x: 567.4576, y: 120.2751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287358044
@@ -6901,7 +6904,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7538,7 +7541,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1564032870}
   m_HandleRect: {fileID: 1564032869}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7804,8 +7807,8 @@ RectTransform:
   m_Father: {fileID: 376148852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8, y: 0}
-  m_AnchorMax: {x: 0.8, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8568,10 +8571,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.8
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228681042}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: MasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1561438033
 GameObject:
   m_ObjectHideFlags: 0
@@ -8921,8 +8936,8 @@ RectTransform:
   m_Father: {fileID: 109483247}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7, y: 0}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9194,7 +9209,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.8, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9269,7 +9284,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.08, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9481,7 +9496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1793748915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9552,10 +9567,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.08
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228681042}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: sfxVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1799108588
 GameObject:
   m_ObjectHideFlags: 0
@@ -10035,7 +10062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000048930302, y: 0}
+  m_AnchoredPosition: {x: 0.0006603581, y: 0.000019501895}
   m_SizeDelta: {x: -394.3234, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1869972812
@@ -11421,8 +11448,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807531206}
   m_HandleRect: {fileID: 1807531205}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.49779037
+  m_Value: 1.0000002
+  m_Size: 0.4977904
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11525,7 +11552,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7189b34fabd9b6a44b3f909e8f1371c4, type: 3}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 60
@@ -11535,18 +11562,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Game Credits
+  m_Text: '
 
+    Game Credits
 
 
     Game Title: Jump n Run
 
 
-
     Developed by:
 
     Kathiravan.T
-
 
 
     Guided
@@ -11557,16 +11583,13 @@ MonoBehaviour:
     Prof. A. Bala Krishnaiah
 
 
-
     External
     Assets:
-
 
 
     Unity Assets
 
     Special Thanks:
-
 
 
     Prof. Salimeda Sandeep:
@@ -11576,7 +11599,6 @@ MonoBehaviour:
     A. Bala Krishnaiah: for valuable insights and feedback.
 
     Contributions:
-
 
 
     Kathiravan.T:
