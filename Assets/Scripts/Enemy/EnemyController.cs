@@ -28,6 +28,9 @@ public abstract class EnemyController : MonoBehaviour
     public Vector3 originalPosition;
     public Vector3 targetPosition;
 
+    public float delay = 1.0f;
+    [SerializeField]
+    private AudioClip hurt;
 
 
     public virtual void Start()
@@ -84,10 +87,16 @@ public abstract class EnemyController : MonoBehaviour
     {
        
         currentHealth -= damage;
+       // _animator.SetBool("isHurt", true);
+        AudioManager.Instance.meleehurt(hurt);
+        _animator.SetTrigger("Hurt");
+       
         if (currentHealth <= 0)
         {
             Die();
         }
+
+        
     }
 
     public virtual void Attack()
@@ -102,12 +111,12 @@ public abstract class EnemyController : MonoBehaviour
        _animator.SetBool("isDead", true);
 
         //Disable enemy
-        GetComponent<Collider2D>().enabled = false;
+       // GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         // Enemy death logic, like playing death animation, dropping items, etc.
 
-       // Destroy(gameObject);
-    }
+        Destroy(gameObject,delay);
+}
 
    /* protected virtual bool IsPlayerInRange()
     {

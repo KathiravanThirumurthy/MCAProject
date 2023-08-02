@@ -11,12 +11,19 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource CollectableSource;
     [SerializeField]
+    private AudioSource meleehurtSource;
+    [SerializeField]
+    private AudioSource playerHurtSource;
+    [SerializeField]
     private AudioSource doorTouchSource;
     [SerializeField]
     private AudioSource menuOverSource;
     [SerializeField]
     private AudioSource deathSource;
-
+    [SerializeField]
+    private AudioSource swordSwingSource;
+    [SerializeField]
+    private AudioSource levelCompleteSource;
 
     // Random pitch adjustment range.
     public float LowPitchRange = .95f;
@@ -58,11 +65,38 @@ public class AudioManager : MonoBehaviour
     // Play a single clip through the music source.
     public void PlayCollectable(AudioClip clip)
     {
-        Debug.Log("sound");
+        
         CollectableSource.clip = clip;
         CollectableSource.Play();
     }
+    
+    public void playerHurtSound(AudioClip clip)
+    {
 
+        playerHurtSource.clip = clip;
+        playerHurtSource.Play();
+    }
+
+    public void meleehurt(AudioClip clip)
+    {
+       // Debug.Log("sound");
+        meleehurtSource.clip = clip;
+        meleehurtSource.Play();
+    }
+    
+    public void swordSwingSound(AudioClip clip)
+    {
+        //  Debug.Log("sound");
+        swordSwingSource.clip = clip;
+        swordSwingSource.Play();
+    }
+    
+    public void levelComplete(AudioClip clip)
+    {
+        //  Debug.Log("sound");
+        levelCompleteSource.clip = clip;
+        levelCompleteSource.Play();
+    }
     public void doorTouch(AudioClip clip)
     {
 

@@ -1082,9 +1082,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GamePlaySource: {fileID: 228681041}
   CollectableSource: {fileID: 228681041}
+  meleehurtSource: {fileID: 228681041}
+  playerHurtSource: {fileID: 228681041}
   doorTouchSource: {fileID: 228681041}
   menuOverSource: {fileID: 228681041}
   deathSource: {fileID: 228681041}
+  swordSwingSource: {fileID: 228681041}
+  levelCompleteSource: {fileID: 228681041}
   LowPitchRange: 0.95
   HighPitchRange: 1.05
 --- !u!4 &228681043

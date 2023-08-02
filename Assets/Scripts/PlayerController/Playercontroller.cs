@@ -29,6 +29,12 @@ public class Playercontroller : MonoBehaviour
     [SerializeField]
     private AudioClip playerDeath;
     [SerializeField]
+    private AudioClip playerHurt;
+    [SerializeField]
+    private AudioClip swordSwing;
+    [SerializeField]
+    private AudioClip levelCompleted;
+    [SerializeField]
     private float gravityScale = 3f;
     [SerializeField]
     private bool isFalling = false;
@@ -78,20 +84,22 @@ public class Playercontroller : MonoBehaviour
             }
          
         }
-        if(Input.GetMouseButtonDown(0) && isGrounded)
+       /* if(Input.GetMouseButtonDown(0) && isGrounded)
         {
            
             PlayerAttack();
             _playerAnimation.attack();
            
+        }*/
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            PlayerAttack();
+            _playerAnimation.attack();
+            AudioManager.Instance.swordSwingSound(swordSwing);
+
         }
-       
 
-
-
-
-
-    }
+   }
     private void FixedUpdate()
     {
         
@@ -120,6 +128,7 @@ public class Playercontroller : MonoBehaviour
         {
             Debug.Log("Dead");
             _playerAnimation.playerDead(true);
+            AudioManager.Instance.playeDeath(playerDeath);
             StartCoroutine(playGameOverDelay());
             // _gameOverController.PlayerDied();
 
@@ -130,8 +139,9 @@ public class Playercontroller : MonoBehaviour
     {
         if (target.gameObject.tag == "LevelComplete")
         {
-            Debug.Log("LEvelComplete");
+           // Debug.Log("LEvelComplete");
             StartCoroutine(LoadLevel(nextSceneLoad));
+            AudioManager.Instance.levelComplete(levelCompleted);
         }
 
     }
@@ -152,9 +162,6 @@ public class Playercontroller : MonoBehaviour
         _scoreController.incrementScore(score);
          AudioManager.Instance.PlayCollectable(keyPickup);
     }
-
-    
-
     public void playerDead(bool playerState)
     {
        // Debug.Log("Player was hit");
@@ -163,10 +170,12 @@ public class Playercontroller : MonoBehaviour
     }
     public void Damage()
     {
-       // Debug.Log("Damage");
+        // Debug.Log("Damage");
         _lives--;
+        //Debug.Log(_lives);
         LifeController.instance.UpdateLives(_lives);
-
+        AudioManager.Instance.playerHurtSound(playerHurt);
+       
         if (_lives < 0)
         {
 
@@ -176,10 +185,11 @@ public class Playercontroller : MonoBehaviour
         else if (_lives == 0)
         {
 
+            Debug.Log("dead");
             _playerAnimation.playerDead(true);
             //UIManager.instance.restartCurrentScene();
            
-          //  AudioManager.Instance.playeDeath(playerDeath);
+            AudioManager.Instance.playeDeath(playerDeath);
             StartCoroutine(playGameOverDelay());
             // _gameOverController.PlayerDied();
             
@@ -189,19 +199,20 @@ public class Playercontroller : MonoBehaviour
     }
     private IEnumerator playGameOverDelay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         _gameOverController.PlayerDied();
         Time.timeScale = 0f;
     }
     private void PlayerAttack()
     {
-        
+
         Collider2D[] hitEnemies =Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach(Collider2D enemy in hitEnemies)
-        {
-           // Debug.Log("we hit " + enemy.name);
-            enemy.GetComponent<MeleeEnemy>().TakeDamage(attackDamage);
-        }
+         foreach(Collider2D enemy in hitEnemies)
+         {
+             Debug.Log("we hit " + enemy.name);
+             enemy.GetComponent<MeleeEnemy>().TakeDamage(attackDamage);
+         }
+  
     }
     private void OnDrawGizmosSelected()
     {
