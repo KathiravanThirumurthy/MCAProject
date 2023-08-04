@@ -142,6 +142,16 @@ public class Playercontroller : MonoBehaviour
            // Debug.Log("LEvelComplete");
             StartCoroutine(LoadLevel(nextSceneLoad));
             AudioManager.Instance.levelComplete(levelCompleted);
+        }else if(target.gameObject.tag == "switch")
+        {
+            
+            GameObject obj = GameObject.Find("Wall"); // Replace "ObjectName" with the name of the GameObject you want to find
+            if (obj != null)
+            {
+                obj.GetComponent<AlphaAnimation>().Play();
+            }
+
+            target.gameObject.SetActive(false);
         }
 
     }

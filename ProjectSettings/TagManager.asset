@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Deathline
   - LevelComplete
+  - switch
   layers:
   - Default
   - TransparentFX
