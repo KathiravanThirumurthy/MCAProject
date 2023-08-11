@@ -13,7 +13,7 @@ public class Playercontroller : MonoBehaviour
     private float speed;
     private Rigidbody2D rgdPlayer;
     private Playeranimation _playerAnimation;
-    
+    private bool isFacingRight = true;
     [SerializeField]
     private float _jumpForce;
     // Checking the player is grounded
@@ -52,6 +52,13 @@ public class Playercontroller : MonoBehaviour
     public LayerMask enemyLayers;
     public int attackDamage=40;
 
+    //shooting
+    public Transform shootingPoint;
+    public GameObject bulletPrefab;
+    public float shootingInterval = 0.5f;
+    public float bulletSpeed = 10.0f;
+
+    private float nextShootTime = 0.0f;
     void Awake()
     {
         Time.timeScale = 1f;
@@ -98,20 +105,51 @@ public class Playercontroller : MonoBehaviour
             AudioManager.Instance.swordSwingSound(swordSwing);
 
         }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (Time.time >= nextShootTime)
+            {
+                if (Input.GetKeyDown(KeyCode.Return)) // You can use any other input key you prefer
+                {
+                    Shoot();
+                    nextShootTime = Time.time + shootingInterval;
+                }
+            }
 
-   }
+        }
+
+    }
     private void FixedUpdate()
     {
         
         if (!isFalling)
         {
             move = Input.GetAxisRaw("Horizontal");
+           if(move > 0)
+            {
+                isFacingRight = true;
+            }
+            else if(move < 0)
+            {
+                isFacingRight = false;
+            }
+            
             //isMoving = true;
             rgdPlayer.gravityScale = gravityScale;
             _playerAnimation.flipPlayer(move);
             rgdPlayer.velocity = new Vector2(move * speed, rgdPlayer.velocity.y);
             _playerAnimation.movement(move);
         }
+    }
+
+    private void Shoot()
+    {
+        // Create a bullet and set its velocity
+        GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
+        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+        // Determine the bullet's direction based on player's facing direction
+        Vector2 shootDirection = isFacingRight ? Vector2.right : Vector2.left;
+        bulletRb.velocity = shootDirection * bulletSpeed;
     }
     // checking the player for collision with the platform
     private void OnCollisionEnter2D(Collision2D collision)
@@ -180,11 +218,13 @@ public class Playercontroller : MonoBehaviour
     }
     public void Damage()
     {
-        // Debug.Log("Damage");
+        // Debug.Log("hurt");
         _lives--;
         //Debug.Log(_lives);
+        _playerAnimation.playerHurt();
         LifeController.instance.UpdateLives(_lives);
         AudioManager.Instance.playerHurtSound(playerHurt);
+        
        
         if (_lives < 0)
         {

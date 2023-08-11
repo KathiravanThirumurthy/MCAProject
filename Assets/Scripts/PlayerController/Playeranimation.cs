@@ -34,6 +34,10 @@ public class Playeranimation : MonoBehaviour
     {
         anim.SetBool("isDead", dead);
     }
+    public void playerHurt()
+    {
+        anim.SetTrigger("isHurt");
+    }
     public void attack()
     {
         anim.SetTrigger("isAttack");
